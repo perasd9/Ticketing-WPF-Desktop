@@ -1,0 +1,6 @@
+C:\Users\Pera\Desktop\projekti\Projektovanje softvera seminarski WinForms\TicketingProvider\TicketingCommon\bin\Debug\TicketingCommon.dll
+C:\Users\Pera\Desktop\projekti\Projektovanje softvera seminarski WinForms\TicketingProvider\TicketingCommon\bin\Debug\TicketingCommon.pdb
+C:\Users\Pera\Desktop\projekti\Projektovanje softvera seminarski WinForms\TicketingProvider\TicketingCommon\obj\Debug\TicketingCommon.csproj.AssemblyReference.cache
+C:\Users\Pera\Desktop\projekti\Projektovanje softvera seminarski WinForms\TicketingProvider\TicketingCommon\obj\Debug\TicketingCommon.csproj.CoreCompileInputs.cache
+C:\Users\Pera\Desktop\projekti\Projektovanje softvera seminarski WinForms\TicketingProvider\TicketingCommon\obj\Debug\TicketingCommon.dll
+C:\Users\Pera\Desktop\projekti\Projektovanje softvera seminarski WinForms\TicketingProvider\TicketingCommon\obj\Debug\TicketingCommon.pdb

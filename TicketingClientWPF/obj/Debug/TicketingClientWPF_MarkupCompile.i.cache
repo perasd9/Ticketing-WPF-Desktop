@@ -1,0 +1,20 @@
+﻿TicketingClientWPF
+
+
+winexe
+C#
+.cs
+C:\Users\Pera\Desktop\projekti\Projektovanje softvera seminarski WinForms\TicketingProvider\TicketingClientWPF\obj\Debug\
+TicketingClientWPF
+none
+false
+DEBUG;TRACE
+C:\Users\Pera\Desktop\projekti\Projektovanje softvera seminarski WinForms\TicketingProvider\TicketingClientWPF\App.xaml
+14-316675433
+
+372102620863
+191249296014
+View\AdministratorView.xaml;View\Controls\Event\UCCreateEvent.xaml;View\Controls\Event\UCGetAllEvents.xaml;View\Controls\Login\UCLogin.xaml;View\Controls\Login\UCLoginButtons.xaml;View\Controls\Reservation\UCCreateAndUpdateReservation.xaml;View\Controls\Reservation\UCGetAllReservations.xaml;View\Controls\User\UCCreateUser.xaml;View\Controls\User\UCGetAllUsers.xaml;View\Controls\User\UCUserDetails.xaml;View\CustomMBox.xaml;View\LoadDetailsView.xaml;View\LoginView.xaml;View\UserView.xaml;
+
+True
+

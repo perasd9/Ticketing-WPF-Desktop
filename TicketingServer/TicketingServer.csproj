@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AF0E3717-FD0B-41FE-B7A7-7E4E75F6D1A0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TicketingServer</RootNamespace>
+    <AssemblyName>TicketingServer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClientHandler.cs" />
+    <Compile Include="Controller.cs" />
+    <Compile Include="FrmServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmServer.Designer.cs">
+      <DependentUpon>FrmServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server.cs" />
+    <Compile Include="SystemOperations\AbstractSystemOperation.cs" />
+    <Compile Include="SystemOperations\AdministratorSO\LoginAdmin.cs" />
+    <Compile Include="SystemOperations\KorisnikSO\AddUser.cs" />
+    <Compile Include="SystemOperations\KorisnikSO\DeleteUser.cs" />
+    <Compile Include="SystemOperations\KorisnikSO\FindUsers.cs" />
+    <Compile Include="SystemOperations\KorisnikSO\GetAllUsers.cs" />
+    <Compile Include="SystemOperations\KorisnikSO\GetUser.cs" />
+    <Compile Include="SystemOperations\KorisnikSO\LoginUser.cs" />
+    <Compile Include="SystemOperations\MestoSO\GetAllPlaces.cs" />
+    <Compile Include="SystemOperations\RezervacijaSO\AddReservation.cs" />
+    <Compile Include="SystemOperations\RezervacijaSO\FindReservations.cs" />
+    <Compile Include="SystemOperations\RezervacijaSO\GetAllReservations.cs" />
+    <Compile Include="SystemOperations\RezervacijaSO\GetReservation.cs" />
+    <Compile Include="SystemOperations\RezervacijaSO\UpdateReservation.cs" />
+    <Compile Include="SystemOperations\SportskiDogadjajSO\AddEvent.cs" />
+    <Compile Include="SystemOperations\SportskiDogadjajSO\DeleteEvent.cs" />
+    <Compile Include="SystemOperations\SportskiDogadjajSO\FindEvents.cs" />
+    <Compile Include="SystemOperations\SportskiDogadjajSO\GetAllEvents.cs" />
+    <Compile Include="SystemOperations\TipDogadjajaSO\GetAllEventTypes.cs" />
+    <Compile Include="Validator\AdministratorValidator.cs" />
+    <Compile Include="Validator\GenericValidator\GenericValidator.cs" />
+    <Compile Include="Validator\KorisnikValidator.cs" />
+    <Compile Include="Validator\ReservationComponentValidator.cs" />
+    <Compile Include="Validator\ReservationValidator.cs" />
+    <Compile Include="Validator\SportskiDogadjajValidator.cs" />
+    <EmbeddedResource Include="FrmServer.resx">
+      <DependentUpon>FrmServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Repository\TicketingRepository.csproj">
+      <Project>{4cc442db-a94d-4140-ae57-e271e755c9bd}</Project>
+      <Name>TicketingRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TicketingCommon\TicketingCommon.csproj">
+      <Project>{88FE33CA-2461-41FA-9722-C80BEF65A5CC}</Project>
+      <Name>TicketingCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
